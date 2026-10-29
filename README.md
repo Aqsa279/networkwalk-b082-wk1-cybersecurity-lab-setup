@@ -402,4 +402,11 @@ Through this cybersecurity lab setup, I gained practical experience with Kali Li
 ### 🎯 Key Takeaway
 
 This lab helped me build a foundation in Linux networking, IPv4 configuration, DNS resolution, and network troubleshooting. These skills will support my future learning in network reconnaissance, vulnerability assessment, and authorized penetration testing.
+______________________________________________________________________________________________________________________
+
+🔐 Security & Ethical Use
+This laboratory is intended strictly for education purposes only.
+
+______________________________________________________________________________________________________________________
+
 
