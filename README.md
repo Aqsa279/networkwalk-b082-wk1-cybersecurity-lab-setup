@@ -280,6 +280,9 @@ In the editor, I selected the wired connection and opened its IPv4 settings.
 
 This allowed me to access the detailed IPv4 configuration options that were not immediately available in the basic network menu.
 
+<img width="1602" height="933" alt="3-screenshot-network-settings-2" src="https://github.com/user-attachments/assets/e77cadb8-63d0-4044-9cd0-be60a4d94fe2" />
+
+
 ### ✅ 3. Resolution
 
 I successfully opened the NetworkManager connection editor and accessed the IPv4 settings for the wired connection.
