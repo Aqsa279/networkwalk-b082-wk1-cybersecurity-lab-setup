@@ -349,6 +349,7 @@ ________________________________________________________________________________
 
 Problem 2. VirtualBox VT-x / Virtualization Error
 The VM initially failed to start because hardware virtualization was disabled in the system firmware/BIOS.
+________________________________________________________________________________________________________________________
 
 The issue was resolved by:
 
