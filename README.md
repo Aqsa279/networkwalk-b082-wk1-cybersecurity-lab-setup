@@ -409,4 +409,17 @@ This laboratory is intended strictly for education purposes only.
 
 ______________________________________________________________________________________________________________________
 
+🔗 **Tools & Resources**
+______________________________________________________________________________________________________________________
+7-Zip: https://7-zip.org/download.html
+VirtualBox: https://virtualbox.org/wiki/Downloads
+Kali Linux: https://kali.org/get-kali
+👤 Author
+**Aqsa Shafiq**
+Cybersecurity Professional B082
+
+LinkedIn: https://www.linkedin.com/in/waqaskarim/
+
+📌 Project Information
+Program Name: Cybersecurity at Networkwalks | Week: 01 | Project: Cybersecurity & Pentesting Lab Setup | Repository: GitHub
 
