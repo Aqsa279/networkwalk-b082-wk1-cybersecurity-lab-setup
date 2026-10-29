@@ -150,4 +150,201 @@ Configuration: Network Name: NatNetwork IPv4 Prefix: 10.0.0.0/24 DHCP: Enabled I
 
 <img width="1919" height="1003" alt="2-screenshot-network-settings-1" src="https://github.com/user-attachments/assets/fbd979f6-4965-4fa1-9453-b9dbcb791ccd" />
 
+A NAT Network was selected because multiple virtual machines connected to the same NAT Network can communicate with one another while also having outbound network connectivity.
 
+This will allow future attacker and target VMs to communicate within the lab
+
+_______________________________________________________________________________________________________________________
+
+Step 4. Import Kali Linux
+The Kali Linux virtual machine was downloaded from the official Kali Linux website and imported into VirtualBox.
+
+The VM network adapter was configured as follows:
+
+Adapter 1
+Attached to: NAT Network
+Network:     NatNetwork
+Adapter Type: Intel PRO/1000 MT Desktop
+The VM was allocated:
+
+RAM: 2048 MB
+
+<img width="1619" height="971" alt="1-screenshot-kali-linux" src="https://github.com/user-attachments/assets/45212f9c-3101-4255-b20a-356968fbba49" />
+
+________________________________________________________________________________________________________________________
+
+
+
+Step 6. Create a Clean VM Snapshot
+After completing the initial configuration, a VirtualBox snapshot was created.
+
+Example snapshot name:
+
+My First kali linux
+The snapshot represents the clean baseline of the laboratory.
+
+If a future exercise changes or damages the VM configuration, the machine can be restored to this baseline.
+
+🔎 Lab Verification
+✅ Test	🧾 Command	🎯 Expected Result
+🌐 Check IP address	ip a	Correct Kali IP displayed
+📡 Test gateway	ping 10.0.0.1	Successful replies
+🌍 Test Internet connectivity	ping 10.0.0.1	Successful replies
+🔎 Test DNS resolution	nslookup google.com	Domain resolves
+🧰 Verify Nmap	nmap --version	Nmap version displayed
+🔄 Verify snapshot	Restore snapshot and run ip a	Baseline configuration restored
+Example Results
+IP Address:
+10.0.0.2/24
+
+Gateway:
+10.0.0.1
+
+DNS:
+10.0.0.1
+
+🐞 Problems Encountered & Solutions
+Documenting problems is an important part of the project.
+
+
+---
+
+## 🛠️ Troubleshooting: Missing IPv4 Configuration Options in Kali Linux
+
+### 🔴 1. Problem Encountered
+
+During the setup of my cybersecurity lab using Kali Linux on VMware Workstation Pro, I encountered an issue while trying to locate the IPv4 network configuration options.
+
+The basic network menu displayed options such as:
+
+- Ethernet
+- Wired Disconnected
+- VPN Connection
+
+However, I could not immediately find the detailed IPv4 configuration fields, including:
+
+- **Method:** Defines how the IP address is obtained, such as automatically through DHCP or manually.
+- **Address:** The IP address assigned to the Kali Linux network interface.
+- **Netmask:** Defines the network range associated with the IP configuration.
+- **Gateway:** The network device used to reach destinations outside the local network.
+- **DNS Servers:** Servers that translate domain names, such as `google.com`, into IP addresses.
+
+Because these options were not visible in the basic network menu, I needed to investigate the existing network connection and locate the detailed configuration settings.
+
+### 🔍 2. Troubleshooting Process
+
+#### Step 1: Identify Saved Network Connections
+
+I ran the following command to inspect the network connection profiles managed by NetworkManager.
+
+```bash
+nmcli connection show
+```
+
+**Purpose:** This command lists saved network connections, their types, and their associated network devices.
+
+**What I checked:** I looked for the wired Ethernet connection and the device associated with it, such as `eth0`.
+
+This helped me identify which connection profile needed further inspection.
+
+#### Step 2: Inspect Network Interfaces and IP Addresses
+
+Next, I ran:
+
+```bash
+ip a
+```
+
+**Purpose:** This command displays network interfaces, their current states, and assigned IP addresses.
+
+The output showed:
+
+- `lo` — the loopback interface, normally assigned `127.0.0.1`.
+- `eth0` — the Ethernet network interface used by the Kali Linux virtual machine.
+
+The `eth0` interface showed the IP address `10.0.0.2`.
+
+This helped me identify the IP address assigned to the virtual machine's Ethernet interface.
+
+#### Step 3: Open the NetworkManager Connection Editor
+
+To access the detailed network settings, I executed:
+
+```bash
+nm-connection-editor
+```
+
+**Purpose:** This command opens the graphical NetworkManager connection editor, where available connection profiles can be inspected and configured.
+
+In the editor, I selected the wired connection and opened its IPv4 settings.
+
+This allowed me to access the detailed IPv4 configuration options that were not immediately available in the basic network menu.
+
+### ✅ 3. Resolution
+
+I successfully opened the NetworkManager connection editor and accessed the IPv4 settings for the wired connection.
+
+I then reviewed and configured the required network settings for my lab environment.
+
+After making the changes, I checked the network configuration and tested internet connectivity and DNS resolution to verify that the connection was working.
+
+**Outcome:** I was able to access the detailed IPv4 configuration options and complete the required network configuration.
+
+### 🧪 4. Verification Commands
+
+After configuring the connection, I used the following commands to verify the network settings.
+
+**Check the IPv4 address assigned to `eth0`:**
+
+```bash
+ip -4 addr show eth0
+```
+
+**Check the routing table and default gateway:**
+
+```bash
+ip route
+```
+
+**Test internet connectivity through a domain name:**
+
+```bash
+ping -c 4 google.com
+```
+
+**Test IP connectivity independently of DNS:**
+
+```bash
+ping -c 4 8.8.8.8
+```
+
+**Check DNS resolution:**
+
+```bash
+nslookup google.com
+```
+
+These commands helped verify the IP configuration, routing information, internet connectivity, and DNS resolution.
+
+### 📚 5. Key Learnings
+
+Through this troubleshooting process, I practised:
+
+- Identifying saved network connection profiles using `nmcli`.
+- Inspecting network interfaces and IP addresses using `ip a`.
+- Understanding the role of the `eth0` network interface.
+- Accessing advanced IPv4 settings through NetworkManager.
+- Understanding the purpose of IP addresses, netmasks, gateways, and DNS servers.
+- Verifying network connectivity using `ping`.
+- Testing domain name resolution using `nslookup`.
+- Following a systematic approach to Linux network troubleshooting.
+
+### 🎯 6. Conclusion
+
+This troubleshooting experience improved my understanding of network configuration in Kali Linux running on VMware Workstation Pro.
+
+I learned how to investigate existing network connections, locate detailed IPv4 settings, and verify connectivity using command-line tools.
+
+These skills provide a useful foundation for future cybersecurity lab activities, including network reconnaissance, port scanning, packet analysis, and authorized penetration testing.
+
+______________________________________________________________________________________________________________________
