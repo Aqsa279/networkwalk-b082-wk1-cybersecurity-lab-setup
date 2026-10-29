@@ -360,3 +360,46 @@ Saving the configuration.
 Restarting the computer.
 Starting the Kali VM again.
 After enabling virtualization, the VM started successfully.
+
+_______________________________________________________________________________________________________________________
+
+
+## 📚 What I Have Learned
+
+Through this cybersecurity lab setup, I gained practical experience with Kali Linux, VMware networking, and basic network troubleshooting.
+
+### 1. Kali Linux and VMware
+- Learned how Kali Linux runs inside a virtual machine using VMware Workstation Pro.
+- Understood the basic role of a virtual machine in a cybersecurity lab.
+
+### 2. Linux Networking Commands
+- Used `ip a` to inspect network interfaces and IP addresses.
+- Used `ip route` to check routing information and the default gateway.
+- Used `nmcli connection show` to identify saved network connections.
+- Used `nm-connection-editor` to access detailed network configuration settings.
+
+### 3. IPv4 Network Configuration
+- Learned the purpose of IPv4 addresses, netmasks, gateways, and DNS servers.
+- Learned where to find IPv4 settings in NetworkManager.
+- Practised investigating network configuration issues.
+
+### 4. Internet Connectivity and DNS
+- Used `ping -c 4 google.com` to test connectivity to a domain.
+- Used `ping -c 4 10.0.0.1` to test IP connectivity.
+- Used `nslookup google.com` to check DNS resolution.
+- Learned that successful IP connectivity and successful DNS resolution are separate checks.
+
+### 5. Troubleshooting Skills
+- Learned to investigate network issues step by step.
+- Practised checking network interfaces, connection profiles, and routing information.
+- Learned to verify connectivity after changing network settings.
+
+### 6. Cybersecurity Lab Documentation
+- Practised documenting lab configurations and troubleshooting steps.
+- Learned how to organize technical notes in Markdown.
+- Improved my understanding of maintaining a GitHub portfolio for cybersecurity learning.
+
+### 🎯 Key Takeaway
+
+This lab helped me build a foundation in Linux networking, IPv4 configuration, DNS resolution, and network troubleshooting. These skills will support my future learning in network reconnaissance, vulnerability assessment, and authorized penetration testing.
+
