@@ -12,7 +12,7 @@ The virtual lab network can be expanded by adding more virtual machines in the f
 
 __________________________________________________________________________________________________________________
 ## 🎯 Project Objectives
-__________________________________________________________________________________________________________________
+
 The primary goals of this project are to build a reliable, secure, and well-organized environment for hands-on cybersecurity practice.
 
 - 🖥️ Set up and configure VirtualBox for virtualization.
@@ -23,3 +23,44 @@ The primary goals of this project are to build a reliable, secure, and well-orga
 - 🔎 Test network connectivity and DNS resolution.
 - 💾 Create a clean virtual machine snapshot for recovery and troubleshooting.
 - 📝 Document each setup stage with commands, explanations, and screenshots.
+
+  
+_____________________________________________________________________________________________________________________
+## 🛡️ Lab Purpose and Applications
+
+This virtual lab is designed to strengthen practical cybersecurity skills by providing a controlled environment for hands-on experimentation, security analysis, and ethical hacking practice.
+
+It serves as a foundation for exploring various cybersecurity concepts and tools, including:
+
+- 🔍 **Network Reconnaissance:** Discovering hosts and gathering network information.
+- 🌐 **Port Scanning:** Identifying open ports and available services.
+- 🛡️ **Vulnerability Assessment:** Finding potential security weaknesses.
+- 📡 **Packet Analysis:** Examining network traffic to understand communication patterns.
+- 🔐 **Web Application Security:** Practicing web security testing techniques.
+- 🧪 **Penetration Testing:** Learning how to identify and validate security issues in authorized lab environments.
+- ⚙️ **Security Tool Practice:** Exploring cybersecurity tools and understanding their practical applications.
+
+### ⚠️ Ethical Use and Safety
+
+All activities performed in this lab must remain within authorized and controlled environments. Testing should only target systems that I own or have explicit permission to assess. This ensures that cybersecurity skills are developed responsibly and ethically.
+
+_______________________________________________________________________________________________________________________
+
+---
+
+## ⚙️ Lab Configuration
+
+The following table summarizes the hardware, virtualization platform, and network settings used in my cybersecurity lab.
+
+| **Component** | **Configuration** |
+|:---|:---|
+| 🖥️ Host Operating System | Windows 11 |
+| 🧠 Host Memory | 16 GB RAM |
+| 🧰 Virtualization Platform | VMware Workstation Pro |
+| 🐉 Security Operating System | Kali Linux 2026.2 |
+| 💾 Kali VM Memory | 2048 MB|
+| 🌐 Virtual Network | `Nat Network` |
+| 📡 Network Address |`	10.0.0.0/24` |
+| 🔗 kali IP address | `10.0.0.2/24` |
+| 🚪 Default Gateway | `10.0.0.1` |
+| 🌍 DNS Server | `10.0.0.1` |
