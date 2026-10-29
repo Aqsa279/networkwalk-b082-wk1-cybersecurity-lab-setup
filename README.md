@@ -2,9 +2,9 @@
 My Kali Linux cybersecurity lab setup, configuration, and hands-on documentation.
 
 _______________________________________________________________________________________________________________________
+📌 Project Overview
+This project involves building a virtual cybersecurity lab using Kali Linux and VMware Workstation to develop practical skills in ethical hacking and penetration testing.
 
-This project documents my cybersecurity lab setup using Kali Linux and VirtualBox.
+The lab provides a controlled environment for learning and practicing network configuration, reconnaissance, network scanning, vulnerability assessment, and security testing. It is designed to support hands-on experiments in a safe and organized way.
 
-The lab provides a safe environment to practice networking, port scanning, reconnaissance, and vulnerability assessment.
-
-It helps me develop practical cybersecurity skills and prepare for authorized penetration testing.
+The virtual lab network can be expanded by adding more virtual machines in the future, allowing me to practice identifying security weaknesses and testing defenses on systems I own or have explicit permission to assess.
