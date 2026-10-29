@@ -206,12 +206,7 @@ DNS:
 🐞 Problems Encountered & Solutions
 Documenting problems is an important part of the project.
 
-
----
-
-## 🛠️ Troubleshooting: Missing IPv4 Configuration Options in Kali Linux
-
-### 🔴 1. Problem Encountered
+## 🛠️Problem 1. Troubleshooting: Missing IPv4 Configuration Options in Kali Linux 
 
 During the setup of my cybersecurity lab using Kali Linux on VMware Workstation Pro, I encountered an issue while trying to locate the IPv4 network configuration options.
 
@@ -351,3 +346,16 @@ I learned how to investigate existing network connections, locate detailed IPv4 
 These skills provide a useful foundation for future cybersecurity lab activities, including network reconnaissance, port scanning, packet analysis, and authorized penetration testing.
 
 ______________________________________________________________________________________________________________________
+
+Problem 2. VirtualBox VT-x / Virtualization Error
+The VM initially failed to start because hardware virtualization was disabled in the system firmware/BIOS.
+
+The issue was resolved by:
+
+Restarting the computer.
+Entering BIOS/UEFI settings.
+Enabling Intel VT-x / hardware virtualization.
+Saving the configuration.
+Restarting the computer.
+Starting the Kali VM again.
+After enabling virtualization, the VM started successfully.
