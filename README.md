@@ -422,7 +422,7 @@ ________________________________________________________________________________
 **Aqsa Shafiq**
 Cybersecurity Professional B082
 
-LinkedIn: https://www.linkedin.com/in/waqaskarim/
+LinkedIn: https://www.linkedin.com/in/aqsa-shafiq-a74770434
 
 📌 Project Information
 Program Name: Cybersecurity at Networkwalks | Week: 01 | Project: Cybersecurity & Pentesting Lab Setup | Repository: GitHub
